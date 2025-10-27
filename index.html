@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillFlow Academy - Premium Online Courses</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #7c3aed;
+            --accent: #06d6a0;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        /* Header & Navigation */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            background: var(--accent);
+            color: var(--dark);
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(6, 214, 160, 0.3);
+        }
+        
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin: 4rem 0 2rem;
+            color: var(--dark);
+        }
+        
+        /* Courses Grid */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .course-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .course-badge {
+            background: var(--accent);
+            color: var(--dark);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        .course-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        
+        .course-card .description {
+            color: var(--gray);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .course-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+        
+        .add-to-cart {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            width: 100%;
+            transition: background 0.3s ease;
+        }
+        
+        .add-to-cart:hover {
+            background: #1d4ed8;
+        }
+        
+        .free-course {
+            border: 2px solid var(--accent);
+        }
+        
+        /* Shopping Cart */
+        .cart-sidebar {
+            position: fixed;
+            right: -400px;
+            top: 0;
+            width: 400px;
+            height: 100vh;
+            background: white;
+            box-shadow: -5px 0 25px rgba(0,0,0,0.1);
+            transition: right 0.3s ease;
+            z-index: 1001;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+        
+        .cart-sidebar.active {
+            right: 0;
+        }
+        
+        .cart-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .close-cart {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray);
+        }
+        
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .cart-item-info {
+            flex: 1;
+        }
+        
+        .cart-item-title {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+        
+        .cart-item-price {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .remove-item {
+            background: var(--error);
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cart-total {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 1rem 0;
+            text-align: right;
+            padding-top: 1rem;
+            border-top: 2px solid #e2e8f0;
+        }
+        
+        .checkout-button {
+            background: var(--accent);
+            color: var(--dark);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            width: 100%;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            z-index: 1000;
+        }
+        
+        .overlay.active {
+            display: block;
+        }
+        
+        /* Payment Methods */
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .payment-method {
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .payment-method:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .payment-method.selected {
+            border-color: var(--primary);
+            background: rgba(37, 99, 235, 0.05);
+        }
+        
+        .payment-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        
+        .footer-section a {
+            color: #cbd5e1;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        /* Admin Login */
+        .admin-login {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: var(--dark);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            z-index: 999;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cart-sidebar {
+                width: 100%;
+                right: -100%;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .payment-methods {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                SkillFlow Academy
+            </a>
+            <div class="nav-links">
+                <a href="#courses">Courses</a>
+                <a href="#free">Free Course</a>
+                <a href="#about">About</a>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Master the Skills of Tomorrow, Today</h1>
+            <p>Join 50,000+ students learning trending skills with our expert-led, addictive courses</p>
+            <button class="cta-button" onclick="scrollToCourses()">Explore Courses</button>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <div class="container">
+        <div class="trust-badges">
+            <div class="trust-badge">
+                <i class="fas fa-shield-alt"></i>
+                <span>Secure Payments</span>
+            </div>
+            <div class="trust-badge">
+                <i class="fas fa-lock"></i>
+                <span>SSL Encrypted</span>
+            </div>
+            <div class="trust-badge">
+                <i class="fas fa-award"></i>
+                <span>Premium Content</span>
+            </div>
+            <div class="trust-badge">
+                <i class="fas fa-download"></i>
+                <span>Instant Access</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Courses Section -->
+    <section id="courses" class="container">
+        <h2 class="section-title">Top Trending Courses</h2>
+        <div class="courses-grid" id="coursesGrid">
+            <!-- Courses will be loaded here -->
+        </div>
+    </section>
+
+    <!-- Free Course Section -->
+    <section id="free" class="container">
+        <h2 class="section-title">Start Learning for Free</h2>
+        <div class="courses-grid">
+            <div class="course-card free-course" id="freeCourseCard">
+                <!-- Free course will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SkillFlow Academy</h3>
+                    <p>Transforming careers through premium online education since 2024.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#courses">All Courses</a>
+                    <a href="#free">Free Course</a>
+                    <a href="#about">About Us</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <a href="mailto:support@skillflow.academy">Contact Support</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Learning Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="cartItems">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart-total">
+            Total: $<span id="cartTotal">0</span>
+        </div>
+        
+        <!-- Payment Methods -->
+        <div class="payment-methods" id="paymentMethods">
+            <div class="payment-method" onclick="selectPayment('payfast')">
+                <div class="payment-icon">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <h4>PayFast</h4>
+                <p>South Africa & Namibia</p>
+            </div>
+            <div class="payment-method" onclick="selectPayment('stripe')">
+                <div class="payment-icon">
+                    <i class="fab fa-stripe"></i>
+                </div>
+                <h4>Stripe</h4>
+                <p>Global Payments</p>
+            </div>
+            <div class="payment-method" onclick="selectPayment('eft')">
+                <div class="payment-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <h4>EFT/Bank Transfer</h4>
+                <p>Direct to FNB</p>
+            </div>
+        </div>
+        
+        <button class="checkout-button" onclick="proceedToCheckout()">
+            Proceed to Checkout
+        </button>
+    </div>
+    
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Admin Login Button -->
+    <div class="admin-login" onclick="openAdminLogin()">
+        <i class="fas fa-cog"></i> Admin
+    </div>
+
+    <script>
+        // Course Data
+        const courses = [
+            {
+                id: 1,
+                title: "AI Prompt Engineering Mastery",
+                price: 97,
+                category: "Technology",
+                level: "Beginner to Advanced",
+                duration: "6 hours",
+                trending: true,
+                description: "Master the art of communicating with AI systems for maximum productivity and creativity"
+            },
+            {
+                id: 2,
+                title: "Short-Form Video Domination",
+                price: 87,
+                category: "Marketing",
+                level: "All Levels",
+                duration: "5 hours",
+                trending: true,
+                description: "Create viral content for TikTok, Reels, and Shorts that drives massive business growth"
+            },
+            {
+                id: 3,
+                title: "Personal Branding for the Digital Age",
+                price: 79,
+                category: "Business",
+                level: "Beginner",
+                duration: "4 hours",
+                trending: true,
+                description: "Build authority and monetize your expertise across all major social platforms"
+            },
+            {
+                id: 4,
+                title: "No-Code Business Automation",
+                price: 89,
+                category: "Technology",
+                level: "Beginner to Intermediate",
+                duration: "5 hours",
+                trending: true,
+                description: "Automate workflows and build powerful apps without any programming knowledge"
+            },
+            {
+                id: 5,
+                title: "Sustainable Living & Green Entrepreneurship",
+                price: 75,
+                category: "Lifestyle",
+                level: "All Levels",
+                duration: "4 hours",
+                trending: true,
+                description: "Build eco-friendly businesses and significantly reduce your environmental impact"
+            },
+            {
+                id: 6,
+                title: "Cryptocurrency & DeFi Fundamentals",
+                price: 99,
+                category: "Finance",
+                level: "Beginner",
+                duration: "6 hours",
+                trending: true,
+                description: "Understand blockchain technology, smart crypto investing, and decentralized finance"
+            }
+        ];
+
+        const freeCourse = {
+            id: 0,
+            title: "Digital Productivity Fundamentals",
+            price: 0,
+            category: "Productivity",
+            level: "All Levels",
+            duration: "2 hours",
+            description: "Master proven time management techniques and tool optimization for maximum daily efficiency"
+        };
+
+        // Shopping Cart & State Management
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let selectedPaymentMethod = null;
+        let businessData = JSON.parse(localStorage.getItem('businessData')) || {
+            totalRevenue: 0,
+            totalSales: 0,
+            monthlyRevenue: 0,
+            monthlySales: 0,
+            target: 1000000, // 1 million ZAR target
+            currency: 'ZAR',
+            salesHistory: []
+        };
+
+        // Initialize the platform
+        document.addEventListener('DOMContentLoaded', function() {
+            renderCourses();
+            renderFreeCourse();
+            updateCartUI();
+            initializeEventListeners();
+            loadBusinessData();
+        });
+
+        function renderCourses() {
+            const grid = document.getElementById('coursesGrid');
+            grid.innerHTML = courses.map(course => `
+                <div class="course-card">
+                    ${course.trending ? '<span class="course-badge">🔥 Trending</span>' : ''}
+                    <h3>${course.title}</h3>
+                    <p class="description">${course.description}</p>
+                    <div class="course-meta">
+                        <span>${course.level}</span>
+                        <span>${course.duration}</span>
+                    </div>
+                    <div class="course-price">$${course.price}</div>
+                    <button class="add-to-cart" onclick="addToCart(${course.id})">
+                        Add to Cart - $${course.price}
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        function renderFreeCourse() {
+            const card = document.getElementById('freeCourseCard');
+            card.innerHTML = `
+                <span class="course-badge">🎁 FREE</span>
+                <h3>${freeCourse.title}</h3>
+                <p class="description">${freeCourse.description}</p>
+                <div class="course-meta">
+                    <span>${freeCourse.level}</span>
+                    <span>${freeCourse.duration}</span>
+                </div>
+                <div class="course-price">FREE</div>
+                <button class="add-to-cart" onclick="enrollFreeCourse()">
+                    Enroll for Free
+                </button>
+            `;
+        }
+
+        function addToCart(courseId) {
+            const course = courses.find(c => c.id === courseId);
+            if (course && !cart.find(item => item.id === courseId)) {
+                cart.push(course);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartUI();
+                showNotification(`Added ${course.title} to cart!`);
+            }
+        }
+
+        function removeFromCart(courseId) {
+            cart = cart.filter(item => item.id !== courseId);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartUI();
+            renderCartItems();
+        }
+
+        function updateCartUI() {
+            const cartCount = document.getElementById('cartCount');
+            const cartTotal = document.getElementById('cartTotal');
+            
+            cartCount.textContent = cart.length;
+            cartTotal.textContent = cart.reduce((total, item) => total + item.price, 0);
+        }
+
+        function renderCartItems() {
+            const cartItems = document.getElementById('cartItems');
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p>Your cart is empty</p>';
+                return;
+            }
+
+            cartItems.innerHTML = cart.map(item => `
+                <div class="cart-item">
+                    <div class="cart-item-info">
+                        <div class="cart-item-title">${item.title}</div>
+                        <div class="cart-item-price">$${item.price}</div>
+                    </div>
+                    <button class="remove-item" onclick="removeFromCart(${item.id})">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        function initializeEventListeners() {
+            document.getElementById('cartIcon').addEventListener('click', toggleCart);
+            document.getElementById('overlay').addEventListener('click', toggleCart);
+        }
+
+        function toggleCart() {
+            const sidebar = document.getElementById('cartSidebar');
+            const overlay = document.getElementById('overlay');
+            
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            if (sidebar.classList.contains('active')) {
+                renderCartItems();
+            }
+        }
+
+        function selectPayment(method) {
+            selectedPaymentMethod = method;
+            
+            // Update UI
+            document.querySelectorAll('.payment-method').forEach(el => {
+                el.classList.remove('selected');
+            });
+            event.currentTarget.classList.add('selected');
+        }
+
+        function proceedToCheckout() {
+            if (cart.length === 0) {
+                showNotification('Your cart is empty!');
+                return;
+            }
+
+            if (!selectedPaymentMethod) {
+                showNotification('Please select a payment method');
+                return;
+            }
+
+            // Process payment based on selected method
+            switch(selectedPaymentMethod) {
+                case 'payfast':
+                    processPayFastPayment();
+                    break;
+                case 'stripe':
+                    processStripePayment();
+                    break;
+                case 'eft':
+                    processEFTPayment();
+                    break;
+            }
+        }
+
+        function processPayFastPayment() {
+            showNotification('Redirecting to PayFast Secure Payment...');
+            
+            // Simulate PayFast integration
+            setTimeout(() => {
+                completePurchase('PayFast');
+            }, 2000);
+        }
+
+        function processStripePayment() {
+            showNotification('Processing with Stripe...');
+            
+            // Simulate Stripe integration
+            setTimeout(() => {
+                completePurchase('Stripe');
+            }, 2000);
+        }
+
+        function processEFTPayment() {
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+            const bankDetails = `
+                FNB Bank Transfer Details:
+                Bank: First National Bank
+                Account Name: SkillFlow Academy
+                Branch Code: 250655
+                Account Type: Business Account
+                Reference: SF${Date.now()}
+                
+                Amount: R${(total * 18.5).toFixed(2)} ZAR
+                Please email proof of payment to payments@skillflow.academy
+            `;
+            
+            alert(`📋 EFT Payment Instructions:\n\n${bankDetails}\n\nOnce payment is confirmed, you will receive your course access within 2 hours.`);
+            
+            // Simulate EFT payment tracking
+            setTimeout(() => {
+                completePurchase('EFT');
+            }, 1000);
+        }
+
+        function completePurchase(paymentMethod) {
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+            const sale = {
+                id: Date.now(),
+                items: [...cart],
+                total: total,
+                paymentMethod: paymentMethod,
+                timestamp: new Date().toISOString(),
+                currency: 'USD'
+            };
+
+            // Update business data
+            businessData.totalRevenue += total;
+            businessData.totalSales += cart.length;
+            businessData.monthlyRevenue += total;
+            businessData.monthlySales += cart.length;
+            businessData.salesHistory.push(sale);
+            
+            localStorage.setItem('businessData', JSON.stringify(businessData));
+
+            // Generate download links
+            const downloadLinks = cart.map(course => 
+                `📥 Download ${course.title}: https://skillflow.academy/download/${course.id}/${generateToken()}`
+            ).join('\n\n');
+            
+            // Show success message
+            alert(`🎉 Payment Successful via ${paymentMethod}!\n\nYour courses are ready for immediate download:\n\n${downloadLinks}\n\nLinks have also been sent to your email.`);
+            
+            // Clear cart
+            cart = [];
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartUI();
+            renderCartItems();
+            toggleCart();
+            selectedPaymentMethod = null;
+            
+            // Reset payment method selection
+            document.querySelectorAll('.payment-method').forEach(el => {
+                el.classList.remove('selected');
+            });
+        }
+
+        function enrollFreeCourse() {
+            const downloadLink = `📥 Download ${freeCourse.title}: https://skillflow.academy/download/free/${generateToken()}`;
+            alert(`🎉 Successfully Enrolled!\n\nYour free course is ready:\n\n${downloadLink}\n\nEnjoy your learning journey!`);
+        }
+
+        function generateToken() {
+            return Math.random().toString(36).substr(2, 9) + Date.now().toString(36);
+        }
+
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: var(--accent);
+                color: var(--dark);
+                padding: 1rem 1.5rem;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                z-index: 1002;
+                font-weight: 600;
+                transform: translateX(400px);
+                transition: transform 0.3s ease;
+            `;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => notification.style.transform = 'translateX(0)', 100);
+            
+            setTimeout(() => {
+                notification.style.transform = 'translateX(400px)';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        function scrollToCourses() {
+            document.getElementById('courses').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        function openAdminLogin() {
+            const password = prompt('Enter Admin Password:');
+            if (password === 'SkillFlow2024!') { // Default password - change in production
+                window.open('dashboard.html', '_blank');
+            } else {
+                alert('Invalid password');
+            }
+        }
+
+        function loadBusinessData() {
+            // Load business data from localStorage
+            const saved = localStorage.getItem('businessData');
+            if (saved) {
+                businessData = JSON.parse(saved);
+            }
+        }
+    </script>
+</body>
+</html>
