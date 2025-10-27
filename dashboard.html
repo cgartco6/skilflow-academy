@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Dashboard - SkillFlow Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #7c3aed;
+            --accent: #06d6a0;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f1f5f9;
+            color: var(--dark);
+        }
+        
+        .dashboard {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            min-height: 100vh;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            background: var(--dark);
+            color: white;
+            padding: 2rem 1rem;
+            position: fixed;
+            height: 100vh;
+            width: 250px;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .nav-link {
+            color: #cbd5e1;
+            text-decoration: none;
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* Main Content */
+        .main-content {
+            grid-column: 2;
+            padding: 2rem;
+        }
+        
+        .header {
+            background: white;
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--primary);
+        }
+        
+        .stat-card.success {
+            border-left-color: var(--success);
+        }
+        
+        .stat-card.warning {
+            border-left-color: var(--warning);
+        }
+        
+        .stat-card.accent {
+            border-left-color: var(--accent);
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .chart-container {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .target-tracker {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .progress-bar {
+            background: #e2e8f0;
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+        
+        .progress-fill {
+            background: linear-gradient(90deg, var(--accent), var(--primary));
+            height: 100%;
+            transition: width 0.5s ease;
+        }
+        
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+        }
+        
+        .recent-sales {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .sales-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        
+        .sales-table th,
+        .sales-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .sales-table th {
+            background: #f8fafc;
+            font-weight: 600;
+            color: var(--gray);
+        }
+        
+        .payment-badge {
+            padding: 0.3rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .badge-payfast {
+            background: #ff6b35;
+            color: white;
+        }
+        
+        .badge-stripe {
+            background: #635bff;
+            color: white;
+        }
+        
+        .badge-eft {
+            background: var(--success);
+            color: white;
+        }
+        
+        .security-badge {
+            background: var(--success);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+            
+            .main-content {
+                grid-column: 1;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                Analytics Dashboard
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    Overview
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    Sales
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    Customers
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </a>
+                <a href="#" class="nav-link" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </a>
+            </div>
+            
+            <div class="security-badge">
+                <i class="fas fa-shield-alt"></i>
+                Secure Connection
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <h1>Business Overview</h1>
+                <p>Real-time analytics and performance metrics</p>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="totalRevenue">$0</div>
+                    <div class="stat-label">Total Revenue</div>
+                </div>
+                <div class="stat-card success">
+                    <div class="stat-value" id="totalSales">0</div>
+                    <div class="stat-label">Total Courses Sold</div>
+                </div>
+                <div class="stat-card warning">
+                    <div class="stat-value" id="monthlyRevenue">$0</div>
+                    <div class="stat-label">Monthly Revenue</div>
+                </div>
+                <div class="stat-card accent">
+                    <div class="stat-value" id="monthlySales">0</div>
+                    <div class="stat-label">Monthly Sales</div>
+                </div>
+            </div>
+
+            <!-- Target Tracker -->
+            <div class="target-tracker">
+                <h2>Revenue Target Tracker</h2>
+                <p>Goal: R 1,000,000 ZAR</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="targetProgress" style="width: 0%"></div>
+                </div>
+                <div class="progress-text">
+                    <span id="currentProgress">R 0 ZAR</span>
+                    <span>R 1,000,000 ZAR</span>
+                </div>
+                <div id="targetPercentage" style="text-align: center; margin-top: 0.5rem; font-weight: 600; color: var(--primary);">
+                    0% Complete
+                </div>
+            </div>
+
+            <!-- Revenue Chart -->
+            <div class="chart-container">
+                <h2>Revenue Trends</h2>
+                <canvas id="revenueChart" height="100"></canvas>
+            </div>
+
+            <!-- Recent Sales -->
+            <div class="recent-sales">
+                <h2>Recent Sales</h2>
+                <table class="sales-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Course</th>
+                            <th>Amount</th>
+                            <th>Payment Method</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="salesTableBody">
+                        <!-- Sales data will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Tax Reminder -->
+            <div class="chart-container">
+                <h2>Tax Compliance</h2>
+                <div id="taxReminder">
+                    <p>📊 <strong>Tax Status:</strong> You are currently below the tax threshold</p>
+                    <p>💡 <strong>Reminder:</strong> First R87,300 of annual income is tax-free for individuals under 65</p>
+                    <p>⚠️ <strong>Note:</strong> Consult with a tax professional for business tax obligations</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Business Data
+        let businessData = JSON.parse(localStorage.getItem('businessData')) || {
+            totalRevenue: 0,
+            totalSales: 0,
+            monthlyRevenue: 0,
+            monthlySales: 0,
+            target: 1000000,
+            currency: 'ZAR',
+            salesHistory: []
+        };
+
+        // Initialize Dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            loadDashboardData();
+            renderCharts();
+            renderRecentSales();
+            checkTaxStatus();
+        });
+
+        function loadDashboardData() {
+            // Update stats
+            document.getElementById('totalRevenue').textContent = '$' + businessData.totalRevenue.toFixed(2);
+            document.getElementById('totalSales').textContent = businessData.totalSales;
+            document.getElementById('monthlyRevenue').textContent = '$' + businessData.monthlyRevenue.toFixed(2);
+            document.getElementById('monthlySales').textContent = businessData.monthlySales;
+
+            // Update target progress (convert USD to ZAR for target tracking)
+            const usdToZar = 18.5; // Example exchange rate
+            const currentZar = businessData.totalRevenue * usdToZar;
+            const progressPercentage = (currentZar / businessData.target) * 100;
+            
+            document.getElementById('targetProgress').style.width = Math.min(progressPercentage, 100) + '%';
+            document.getElementById('currentProgress').textContent = 'R ' + currentZar.toLocaleString('en-ZA') + ' ZAR';
+            document.getElementById('targetPercentage').textContent = Math.min(progressPercentage, 100).toFixed(1) + '% Complete';
+        }
+
+        function renderCharts() {
+            const ctx = document.getElementById('revenueChart').getContext('2d');
+            
+            // Generate sample data for the chart
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            const revenueData = months.map(() => Math.floor(Math.random() * 1000) + 500);
+            
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: months,
+                    datasets: [{
+                        label: 'Monthly Revenue ($)',
+                        data: revenueData,
+                        borderColor: '#2563eb',
+                        backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                        borderWidth: 2,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Monthly Revenue Growth'
+                        }
+                    }
+                }
+            });
+        }
+
+        function renderRecentSales() {
+            const tbody = document.getElementById('salesTableBody');
+            
+            if (businessData.salesHistory.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" style="text-align: center;">No sales yet</td></tr>';
+                return;
+            }
+
+            // Show last 10 sales
+            const recentSales = businessData.salesHistory.slice(-10).reverse();
+            
+            tbody.innerHTML = recentSales.map(sale => {
+                const date = new Date(sale.timestamp).toLocaleDateString();
+                const courseNames = sale.items.map(item => item.title).join(', ');
+                const paymentBadgeClass = `badge-${sale.paymentMethod.toLowerCase()}`;
+                
+                return `
+                    <tr>
+                        <td>${date}</td>
+                        <td>${courseNames}</td>
+                        <td>$${sale.total.toFixed(2)}</td>
+                        <td>
+                            <span class="payment-badge ${paymentBadgeClass}">
+                                ${sale.paymentMethod}
+                            </span>
+                        </td>
+                        <td>✅ Completed</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function checkTaxStatus() {
+            const usdToZar = 18.5;
+            const annualRevenueZAR = businessData.totalRevenue * usdToZar;
+            const taxThreshold = 87300; // South African tax-free threshold
+            
+            const taxReminder = document.getElementById('taxReminder');
+            
+            if (annualRevenueZAR > taxThreshold) {
+                taxReminder.innerHTML = `
+                    <p style="color: var(--warning);">📊 <strong>Tax Status:</strong> You have exceeded the tax-free threshold</p>
+                    <p>💰 <strong>Annual Revenue:</strong> R ${annualRevenueZAR.toLocaleString('en-ZA')} ZAR</p>
+                    <p>⚠️ <strong>Action Required:</strong> Consult with a tax professional immediately</p>
+                    <p>💡 <strong>Reminder:</strong> Keep all business expense records for deductions</p>
+                `;
+            }
+        }
+
+        function logout() {
+            if (confirm('Are you sure you want to logout?')) {
+                window.close();
+            }
+        }
+
+        // Auto-refresh data every 30 seconds
+        setInterval(() => {
+            loadDashboardData();
+            renderRecentSales();
+            checkTaxStatus();
+        }, 30000);
+
+        // Simulate real-time updates
+        setInterval(() => {
+            // Simulate occasional new sales for demo
+            if (Math.random() < 0.3) {
+                const newSale = {
+                    id: Date.now(),
+                    items: [courses[Math.floor(Math.random() * courses.length)]],
+                    total: Math.floor(Math.random() * 100) + 50,
+                    paymentMethod: ['PayFast', 'Stripe', 'EFT'][Math.floor(Math.random() * 3)],
+                    timestamp: new Date().toISOString(),
+                    currency: 'USD'
+                };
+
+                businessData.totalRevenue += newSale.total;
+                businessData.totalSales += 1;
+                businessData.monthlyRevenue += newSale.total;
+                businessData.monthlySales += 1;
+                businessData.salesHistory.push(newSale);
+                
+                localStorage.setItem('businessData', JSON.stringify(businessData));
+                loadDashboardData();
+                renderRecentSales();
+            }
+        }, 15000);
+    </script>
+</body>
+</html>
