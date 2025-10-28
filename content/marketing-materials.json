@@ -1,0 +1,220 @@
+{
+  "marketing_campaigns": [
+    {
+      "id": 1,
+      "name": "January 2024 Launch Campaign",
+      "platform": "Multi-Platform",
+      "status": "active",
+      "start_date": "2024-01-15",
+      "end_date": "2024-02-15",
+      "budget": 50000,
+      "target_countries": ["ZA", "NA", "BW", "US", "GB", "AU", "DE", "CA"],
+      "content": {
+        "tiktok": [
+          {
+            "type": "short_video",
+            "theme": "AI Prompt Engineering Preview",
+            "script": "Show quick transformation from basic to advanced AI prompts with dramatic results",
+            "hashtags": ["#AIPrompt", "#ChatGPT", "#AIRevolution", "#LearnAI", "#SkillFlow"],
+            "schedule": "3x daily"
+          },
+          {
+            "type": "testimonial",
+            "theme": "Student Success Story",
+            "script": "Before/after story of student landing job after course completion",
+            "hashtags": ["#SuccessStory", "#CareerChange", "#OnlineLearning", "#SkillFlowWorks"],
+            "schedule": "2x daily"
+          }
+        ],
+        "instagram": [
+          {
+            "type": "carousel",
+            "theme": "12 Courses in 12 Days",
+            "script": "Daily feature of each course with student testimonials and key benefits",
+            "hashtags": ["#OnlineCourses", "#LearnNewSkills", "#CareerGrowth", "#DigitalEducation"],
+            "schedule": "1x daily"
+          },
+          {
+            "type": "reels",
+            "theme": "Quick Tips & Tutorials",
+            "script": "30-second valuable tips from each course",
+            "hashtags": ["#QuickTips", "#LearnFast", "#SkillHacks", "#Education"],
+            "schedule": "2x daily"
+          }
+        ],
+        "youtube": [
+          {
+            "type": "course_previews",
+            "theme": "Free Course Modules",
+            "script": "Full module previews from popular courses",
+            "tags": ["online courses", "digital skills", "career development", "e-learning"],
+            "schedule": "3x weekly"
+          },
+          {
+            "type": "interviews",
+            "theme": "Instructor Spotlights",
+            "script": "Deep dive interviews with course instructors",
+            "tags": ["expert interviews", "industry insights", "learning tips", "career advice"],
+            "schedule": "1x weekly"
+          }
+        ],
+        "facebook": [
+          {
+            "type": "community_posts",
+            "theme": "Student Community Engagement",
+            "script": "Interactive posts asking about learning goals and challenges",
+            "hashtags": ["#LearningCommunity", "#StudyGroup", "#OnlineStudents", "#SkillFlowFamily"],
+            "schedule": "2x daily"
+          },
+          {
+            "type": "live_qa",
+            "theme": "Weekly Q&A Sessions",
+            "script": "Live sessions with instructors answering student questions",
+            "hashtags": ["#LiveQA", "#AskExperts", "#LearningHelp", "#CourseAdvice"],
+            "schedule": "1x weekly"
+          }
+        ],
+        "twitter": [
+          {
+            "type": "threads",
+            "theme": "Deep Dive Course Benefits",
+            "script": "Comprehensive threads explaining course value and outcomes",
+            "hashtags": ["#EdTech", "#OnlineLearning", "#CareerSkills", "#DigitalTransformation"],
+            "schedule": "1x daily"
+          },
+          {
+            "type": "tips",
+            "theme": "Daily Learning Tips",
+            "script": "Quick valuable tips related to course content",
+            "hashtags": ["#LearningTips", "#StudyHacks", "#Productivity", "#SkillBuilding"],
+            "schedule": "3x daily"
+          }
+        ],
+        "linkedin": [
+          {
+            "type": "professional_posts",
+            "theme": "Career Advancement Stories",
+            "script": "Case studies of career progression after course completion",
+            "hashtags": ["#CareerGrowth", "#ProfessionalDevelopment", "#SkillsGap", "#LifelongLearning"],
+            "schedule": "1x daily"
+          },
+          {
+            "type": "articles",
+            "theme": "Industry Insights",
+            "script": "Long-form articles on industry trends and skill demands",
+            "hashtags": ["#IndustryTrends", "#FutureSkills", "#DigitalEconomy", "#WorkforceDevelopment"],
+            "schedule": "2x weekly"
+          }
+        ]
+      },
+      "performance_metrics": {
+        "target_impressions": 5000000,
+        "target_conversions": 5000,
+        "target_engagement": 15,
+        "roi_target": 300
+      }
+    }
+  ],
+  "email_sequences": [
+    {
+      "sequence_name": "New Subscriber Welcome",
+      "trigger": "email_signup",
+      "emails": [
+        {
+          "day": 0,
+          "subject": "Welcome to SkillFlow Academy! Your Learning Journey Starts Here 🚀",
+          "content": "Complete welcome email with free course access and platform tour"
+        },
+        {
+          "day": 2,
+          "subject": "Your Free Course is Waiting - Plus Special Launch Discount 🎁",
+          "content": "Reminder about free course and limited-time discount on premium courses"
+        },
+        {
+          "day": 7,
+          "subject": "Which Skills Will You Master This Year? 🔥",
+          "content": "Course recommendations based on popular career paths"
+        }
+      ]
+    },
+    {
+      "sequence_name": "Cart Abandonment",
+      "trigger": "cart_abandoned",
+      "emails": [
+        {
+          "hour": 2,
+          "subject": "Complete Your Learning Journey - Courses Waiting in Cart 📚",
+          "content": "Gentle reminder with course benefits highlighted"
+        },
+        {
+          "hour": 24,
+          "subject": "Special Offer: 24-Hour Discount on Your Selected Courses ⏰",
+          "content": "Limited-time discount to encourage purchase completion"
+        },
+        {
+          "hour": 72,
+          "subject": "Last Chance: Your Selected Courses Are Almost Gone! 🎯",
+          "content": "Final reminder with urgency and value reinforcement"
+        }
+      ]
+    }
+  ],
+  "ad_copy": {
+    "facebook_ads": [
+      {
+        "headline": "Transform Your Career in 2024",
+        "primary_text": "Join 85,000+ students mastering in-demand skills. Learn from industry experts and advance your career from anywhere.",
+        "description": "12 premium courses. Lifetime access. Money-back guarantee.",
+        "cta": "Explore Courses"
+      },
+      {
+        "headline": "AI Skills = Higher Salary",
+        "primary_text": "Master AI prompt engineering and boost your earning potential. Companies are paying premium for AI skills.",
+        "description": "6-hour comprehensive course. Practical projects. Expert instruction.",
+        "cta": "Learn AI Now"
+      }
+    ],
+    "google_ads": [
+      {
+        "headline1": "Online Courses That Actually Work",
+        "headline2": "Learn In-Demand Digital Skills",
+        "headline3": "Start Today - Transform Your Career",
+        "description": "Join thousands of successful students. 12 premium courses. Expert instructors. Flexible learning.",
+        "path1": "courses",
+        "path2": "enroll-now"
+      }
+    ]
+  },
+  "content_team": {
+    "video_producers": 4,
+    "content_writers": 3,
+    "social_media_managers": 2,
+    "graphic_designers": 2,
+    "seo_specialists": 1,
+    "performance_analysts": 1
+  },
+  "creation_schedule": {
+    "daily_tasks": [
+      "Create 3 TikTok videos",
+      "Schedule 5 Instagram posts",
+      "Publish 2 YouTube shorts",
+      "Write 1 LinkedIn article",
+      "Engage with community comments",
+      "Analyze campaign performance"
+    ],
+    "weekly_tasks": [
+      "Produce 2 full YouTube videos",
+      "Create email newsletter",
+      "Develop new ad creatives",
+      "Review and optimize campaigns",
+      "Plan next week's content calendar"
+    ],
+    "monthly_tasks": [
+      "Launch new course content",
+      "Update existing course materials",
+      "Analyze overall performance",
+      "Plan quarterly strategy",
+      "Team training and development"
+    ]
+  }
+}
