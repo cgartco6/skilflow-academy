@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Dashboard - SkillFlow Academy</title>
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                Analytics Dashboard
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-link active" data-tab="overview">
+                    <i class="fas fa-home"></i>
+                    Overview
+                </a>
+                <a href="#" class="nav-link" data-tab="sales">
+                    <i class="fas fa-shopping-cart"></i>
+                    Sales
+                </a>
+                <a href="#" class="nav-link" data-tab="courses">
+                    <i class="fas fa-book"></i>
+                    Courses
+                </a>
+                <a href="#" class="nav-link" data-tab="marketing">
+                    <i class="fas fa-bullhorn"></i>
+                    Marketing
+                </a>
+                <a href="#" class="nav-link" data-tab="settings">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </a>
+                <a href="#" class="nav-link" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </a>
+            </div>
+            
+            <div class="security-badge">
+                <i class="fas fa-shield-alt"></i>
+                Secure Connection • Encrypted
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <h1>Business Intelligence Dashboard</h1>
+                <p>Real-time analytics and performance metrics • Updated just now</p>
+            </div>
+
+            <!-- Overview Tab -->
+            <div class="tab-content active" id="overview-tab">
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="totalRevenue">R 0</div>
+                        <div class="stat-label">Total Revenue</div>
+                        <div class="stat-trend up">+12% this month</div>
+                    </div>
+                    <div class="stat-card success">
+                        <div class="stat-value" id="totalSales">0</div>
+                        <div class="stat-label">Total Courses Sold</div>
+                        <div class="stat-trend up">+8% this week</div>
+                    </div>
+                    <div class="stat-card warning">
+                        <div class="stat-value" id="monthlyRevenue">R 0</div>
+                        <div class="stat-label">Monthly Revenue</div>
+                        <div class="stat-trend up">+15% growth</div>
+                    </div>
+                    <div class="stat-card accent">
+                        <div class="stat-value" id="monthlySales">0</div>
+                        <div class="stat-label">Monthly Sales</div>
+                        <div class="stat-trend up">+22% growth</div>
+                    </div>
+                </div>
+
+                <!-- Target Tracker -->
+                <div class="target-tracker">
+                    <h2>🎯 Million Rand Target Tracker</h2>
+                    <p>Strategic Goal: R 1,000,000 ZAR Annual Revenue</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="targetProgress" style="width: 0%"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span id="currentProgress">R 0 ZAR</span>
+                        <span>R 1,000,000 ZAR</span>
+                    </div>
+                    <div id="targetPercentage" style="text-align: center; margin-top: 0.5rem; font-weight: 600; color: var(--primary);">
+                        0% Complete • On Track 🚀
+                    </div>
+                </div>
+
+                <!-- Charts Row -->
+                <div class="charts-row">
+                    <div class="chart-container">
+                        <h3>Revenue Trends</h3>
+                        <canvas id="revenueChart" height="250"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Sales by Payment Method</h3>
+                        <canvas id="paymentChart" height="250"></canvas>
+                    </div>
+                </div>
+
+                <!-- Recent Sales -->
+                <div class="recent-sales">
+                    <h3>Recent Sales Activity</h3>
+                    <table class="sales-table">
+                        <thead>
+                            <tr>
+                                <th>Date & Time</th>
+                                <th>Course</th>
+                                <th>Amount</th>
+                                <th>Payment Method</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="salesTableBody">
+                            <!-- Sales data loaded dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Sales Tab -->
+            <div class="tab-content" id="sales-tab">
+                <div class="tab-header">
+                    <h2>Sales Analytics</h2>
+                    <button class="export-btn" onclick="exportSalesData()">
+                        <i class="fas fa-download"></i> Export Data
+                    </button>
+                </div>
+                <!-- Sales-specific content -->
+            </div>
+
+            <!-- Courses Tab -->
+            <div class="tab-content" id="courses-tab">
+                <div class="tab-header">
+                    <h2>Course Management</h2>
+                    <button class="add-btn" onclick="addNewCourse()">
+                        <i class="fas fa-plus"></i> Add Course
+                    </button>
+                </div>
+                <!-- Course management content -->
+            </div>
+
+            <!-- Marketing Tab -->
+            <div class="tab-content" id="marketing-tab">
+                <div class="tab-header">
+                    <h2>Marketing Automation</h2>
+                    <button class="campaign-btn" onclick="launchCampaign()">
+                        <i class="fas fa-rocket"></i> New Campaign
+                    </button>
+                </div>
+                <!-- Marketing content -->
+            </div>
+
+            <!-- Tax Compliance Section -->
+            <div class="compliance-section">
+                <h3>📊 Tax Compliance & Financial Overview</h3>
+                <div id="taxReminder">
+                    <div class="compliance-card">
+                        <h4>Current Tax Status</h4>
+                        <p>✅ You are below the tax threshold</p>
+                        <p>💰 Annual Revenue: <span id="annualRevenue">R 0 ZAR</span></p>
+                        <p>📈 Tax-Free Threshold: R 87,300 ZAR (Individuals under 65)</p>
+                        <div class="compliance-alert">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Consult with a tax professional for business tax obligations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/dashboard.js"></script>
+</body>
+</html>
