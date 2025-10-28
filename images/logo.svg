@@ -1,0 +1,11 @@
+<svg width="200" height="50" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#06d6a0"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="50" height="50" rx="10" fill="url(#gradient)"/>
+  <path d="M15 15 L35 15 L25 35 Z" fill="white"/>
+  <text x="60" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">SkillFlow Academy</text>
+</svg>
