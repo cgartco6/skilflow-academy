@@ -1,0 +1,418 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "AI Prompt Engineering Mastery",
+      "price": 1799,
+      "category": "Technology",
+      "level": "Beginner to Advanced",
+      "duration": "6 hours",
+      "modules": 12,
+      "students": 12450,
+      "rating": 4.9,
+      "trending": true,
+      "description": "Master the art of communicating with AI systems for maximum productivity and creativity. Learn advanced prompt techniques that work across all AI platforms.",
+      "full_description": "This comprehensive course will transform how you interact with AI systems. You'll learn advanced prompting techniques, context management, and creative AI communication strategies that professional AI engineers use daily.",
+      "learning_outcomes": [
+        "Write effective prompts for any AI system",
+        "Understand AI thinking patterns",
+        "Create complex multi-step AI workflows",
+        "Master context window management",
+        "Develop creative AI collaboration techniques"
+      ],
+      "instructor": {
+        "name": "Dr. Sarah Chen",
+        "title": "AI Research Scientist",
+        "experience": "8+ years in AI development",
+        "students": 45000
+      },
+      "icon": "🤖",
+      "image": "images/course-placeholders/course-1.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": 2,
+      "title": "Short-Form Video Domination",
+      "price": 1599,
+      "category": "Marketing",
+      "level": "All Levels",
+      "duration": "5 hours",
+      "modules": 10,
+      "students": 18700,
+      "rating": 4.8,
+      "trending": true,
+      "description": "Create viral content for TikTok, Reels, and Shorts that drives massive business growth. Algorithm secrets and engagement hacks included.",
+      "full_description": "Dominate short-form video platforms with proven strategies that drive virality and business growth. Learn platform-specific algorithms, content creation frameworks, and growth hacking techniques.",
+      "learning_outcomes": [
+        "Create viral video content consistently",
+        "Understand platform algorithms deeply",
+        "Build engaged communities",
+        "Monetize your video presence",
+        "Master video editing and storytelling"
+      ],
+      "instructor": {
+        "name": "Marcus Johnson",
+        "title": "Video Marketing Expert",
+        "experience": "6+ years in social media",
+        "students": 32000
+      },
+      "icon": "🎬",
+      "image": "images/course-placeholders/course-2.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": 3,
+      "title": "Personal Branding for the Digital Age",
+      "price": 1499,
+      "category": "Business",
+      "level": "Beginner",
+      "duration": "4 hours",
+      "modules": 8,
+      "students": 9300,
+      "rating": 4.7,
+      "trending": true,
+      "description": "Build authority and monetize your expertise across all major social platforms. Become the go-to expert in your niche.",
+      "full_description": "Transform your personal brand into a powerful business asset. Learn how to position yourself as an authority, create valuable content, and build a loyal following across digital platforms.",
+      "learning_outcomes": [
+        "Develop a strong personal brand strategy",
+        "Create compelling content consistently",
+        "Build authority in your niche",
+        "Monetize your expertise effectively",
+        "Grow and engage your audience"
+      ],
+      "instructor": {
+        "name": "Elena Rodriguez",
+        "title": "Personal Branding Coach",
+        "experience": "7+ years in digital marketing",
+        "students": 28000
+      },
+      "icon": "⭐",
+      "image": "images/course-placeholders/course-3.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": 4,
+      "title": "No-Code Business Automation",
+      "price": 1699,
+      "category": "Technology",
+      "level": "Beginner to Intermediate",
+      "duration": "5 hours",
+      "modules": 9,
+      "students": 11200,
+      "rating": 4.8,
+      "trending": true,
+      "description": "Automate workflows and build powerful apps without any programming knowledge. Save 20+ hours per week with smart automation.",
+      "full_description": "Learn to automate business processes and build functional applications without writing code. Master no-code tools that can transform your business operations and save you countless hours.",
+      "learning_outcomes": [
+        "Automate repetitive business tasks",
+        "Build custom applications without code",
+        "Integrate multiple business systems",
+        "Create efficient workflows",
+        "Scale operations with automation"
+      ],
+      "instructor": {
+        "name": "Alex Thompson",
+        "title": "No-Code Expert",
+        "experience": "5+ years in automation",
+        "students": 19000
+      },
+      "icon": "⚡",
+      "image": "images/course-placeholders/course-4.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": 5,
+      "title": "Sustainable Living & Green Entrepreneurship",
+      "price": 1399,
+      "category": "Lifestyle",
+      "level": "All Levels",
+      "duration": "4 hours",
+      "modules": 7,
+      "students": 8400,
+      "rating": 4.6,
+      "trending": true,
+      "description": "Build eco-friendly businesses and significantly reduce your environmental impact. Profit while making a positive difference.",
+      "full_description": "Combine sustainability with entrepreneurship to create businesses that benefit both the planet and your wallet. Learn green business models, sustainable practices, and eco-friendly marketing.",
+      "learning_outcomes": [
+        "Launch sustainable business ventures",
+        "Reduce environmental impact",
+        "Market green products effectively",
+        "Understand circular economy principles",
+        "Build brand loyalty through sustainability"
+      ],
+      "instructor": {
+        "name": "Dr. Maya Patel",
+        "title": "Sustainability Expert",
+        "experience": "10+ years in environmental science",
+        "students": 15000
+      },
+      "icon": "🌱",
+      "image": "images/course-placeholders/course-5.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": 6,
+      "title": "Cryptocurrency & DeFi Fundamentals",
+      "price": 1899,
+      "category": "Finance",
+      "level": "Beginner",
+      "duration": "6 hours",
+      "modules": 11,
+      "students": 15600,
+      "rating": 4.9,
+      "trending": true,
+      "description": "Understand blockchain technology, smart crypto investing, and decentralized finance. Navigate the Web3 space with confidence.",
+      "full_description": "Demystify cryptocurrency and decentralized finance. Learn blockchain fundamentals, smart investment strategies, and how to safely participate in the DeFi ecosystem.",
+      "learning_outcomes": [
+        "Understand blockchain technology",
+        "Make informed crypto investments",
+        "Navigate DeFi platforms safely",
+        "Secure digital assets properly",
+        "Identify promising Web3 opportunities"
+      ],
+      "instructor": {
+        "name": "James Wilson",
+        "title": "Blockchain Analyst",
+        "experience": "6+ years in crypto markets",
+        "students": 22000
+      },
+      "icon": "₿",
+      "image": "images/course-placeholders/course-6.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": 7,
+      "title": "Mental Health & Digital Wellness",
+      "price": 1299,
+      "category": "Health",
+      "level": "All Levels",
+      "duration": "3 hours",
+      "modules": 6,
+      "students": 7200,
+      "rating": 4.7,
+      "trending": true,
+      "description": "Manage stress, anxiety, and maintain optimal wellness in our hyper-connected world. Practical techniques for digital balance.",
+      "full_description": "Develop healthy digital habits and maintain mental wellness in the age of constant connectivity. Learn practical techniques for stress management, digital detox, and mindful technology use.",
+      "learning_outcomes": [
+        "Manage digital overwhelm effectively",
+        "Develop healthy tech habits",
+        "Reduce stress and anxiety",
+        "Create work-life balance",
+        "Practice digital mindfulness"
+      ],
+      "instructor": {
+        "name": "Dr. Lisa Park",
+        "title": "Clinical Psychologist",
+        "experience": "12+ years in mental health",
+        "students": 13000
+      },
+      "icon": "🧠",
+      "image": "images/course-placeholders/course-7.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": 8,
+      "title": "Remote Work Mastery",
+      "price": 1549,
+      "category": "Career",
+      "level": "All Levels",
+      "duration": "4 hours",
+      "modules": 8,
+      "students": 10800,
+      "rating": 4.8,
+      "trending": true,
+      "description": "Excel in remote work environments and build a successful location-independent career. Productivity systems that actually work.",
+      "full_description": "Master the skills and systems needed to thrive in remote work environments. Learn productivity techniques, communication strategies, and career advancement in distributed teams.",
+      "learning_outcomes": [
+        "Maximize remote work productivity",
+        "Communicate effectively in distributed teams",
+        "Create optimal home office setups",
+        "Advance your remote career",
+        "Maintain work-life boundaries"
+      ],
+      "instructor": {
+        "name": "David Kim",
+        "title": "Remote Work Consultant",
+        "experience": "8+ years in remote leadership",
+        "students": 18000
+      },
+      "icon": "🏠",
+      "image": "images/course-placeholders/course-8.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": 9,
+      "title": "Data Analytics for Beginners",
+      "price": 1749,
+      "category": "Technology",
+      "level": "Beginner",
+      "duration": "7 hours",
+      "modules": 13,
+      "students": 9600,
+      "rating": 4.7,
+      "trending": true,
+      "description": "Learn to analyze complex data and make data-driven business decisions without coding. Turn data into actionable insights.",
+      "full_description": "Unlock the power of data without learning to code. Master data analysis techniques, visualization tools, and decision-making frameworks that drive business success.",
+      "learning_outcomes": [
+        "Analyze and interpret business data",
+        "Create compelling data visualizations",
+        "Make data-driven decisions",
+        "Use no-code analytics tools",
+        "Present data insights effectively"
+      ],
+      "instructor": {
+        "name": "Dr. Michael Brown",
+        "title": "Data Scientist",
+        "experience": "9+ years in data analytics",
+        "students": 16000
+      },
+      "icon": "📊",
+      "image": "images/course-placeholders/course-9.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": 10,
+      "title": "Ethical Hacking Fundamentals",
+      "price": 1999,
+      "category": "Technology",
+      "level": "Intermediate",
+      "duration": "8 hours",
+      "modules": 14,
+      "students": 6800,
+      "rating": 4.9,
+      "trending": true,
+      "description": "Learn essential cybersecurity basics and practical ethical hacking techniques. Protect yourself and understand digital security.",
+      "full_description": "Gain practical cybersecurity skills through ethical hacking. Learn to identify vulnerabilities, protect systems, and understand hacker methodologies from a defensive perspective.",
+      "learning_outcomes": [
+        "Understand cybersecurity fundamentals",
+        "Identify system vulnerabilities",
+        "Perform ethical hacking techniques",
+        "Implement security measures",
+        "Protect personal and business data"
+      ],
+      "instructor": {
+        "name": "Captain Ryan Zhao",
+        "title": "Cybersecurity Expert",
+        "experience": "11+ years in infosec",
+        "students": 14000
+      },
+      "icon": "🛡️",
+      "image": "images/course-placeholders/course-10.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": 11,
+      "title": "NFT Creation & Marketing",
+      "price": 1649,
+      "category": "Creative",
+      "level": "Beginner to Intermediate",
+      "duration": "5 hours",
+      "modules": 9,
+      "students": 7900,
+      "rating": 4.6,
+      "trending": true,
+      "description": "Create, mint, and successfully market your own NFT collections to global audiences. Turn your creativity into income.",
+      "full_description": "Master the complete NFT creation and marketing process. Learn from concept development to minting, pricing strategies, and community building for successful NFT launches.",
+      "learning_outcomes": [
+        "Create and mint NFT collections",
+        "Develop effective NFT marketing strategies",
+        "Build engaged NFT communities",
+        "Price and sell NFTs successfully",
+        "Navigate NFT marketplaces"
+      ],
+      "instructor": {
+        "name": "Sophia Martinez",
+        "title": "NFT Artist & Marketer",
+        "experience": "4+ years in digital art",
+        "students": 11000
+      },
+      "icon": "🖼️",
+      "image": "images/course-placeholders/course-11.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": 12,
+      "title": "Metaverse & Web3 Essentials",
+      "price": 1799,
+      "category": "Technology",
+      "level": "Beginner",
+      "duration": "4 hours",
+      "modules": 8,
+      "students": 6200,
+      "rating": 4.7,
+      "trending": true,
+      "description": "Understand and confidently navigate the emerging metaverse and Web3 landscape. Position yourself for the next digital revolution.",
+      "full_description": "Explore the fundamentals of metaverse technologies and Web3 ecosystems. Understand virtual worlds, blockchain integration, and opportunities in this emerging digital frontier.",
+      "learning_outcomes": [
+        "Understand metaverse technologies",
+        "Navigate Web3 ecosystems",
+        "Identify opportunities in virtual worlds",
+        "Participate in decentralized communities",
+        "Prepare for future digital trends"
+      ],
+      "instructor": {
+        "name": "Daniel Cooper",
+        "title": "Web3 Strategist",
+        "experience": "5+ years in emerging tech",
+        "students": 9000
+      },
+      "icon": "🌐",
+      "image": "images/course-placeholders/course-12.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    }
+  ],
+  "free_course": {
+    "id": 0,
+    "title": "Digital Productivity Fundamentals",
+    "price": 0,
+    "category": "Productivity",
+    "level": "All Levels",
+    "duration": "2 hours",
+    "modules": 4,
+    "students": 45300,
+    "rating": 4.8,
+    "description": "Master proven time management techniques and tool optimization for maximum daily efficiency. Get more done in less time.",
+    "full_description": "Transform your productivity with fundamental time management and digital organization techniques. Learn systems that help you accomplish more in less time while reducing stress.",
+    "learning_outcomes": [
+      "Implement effective time management systems",
+      "Master digital organization tools",
+      "Reduce procrastination and distractions",
+      "Create efficient daily workflows",
+      "Achieve better work-life balance"
+    ],
+    "instructor": {
+      "name": "SkillFlow Team",
+      "title": "Productivity Experts",
+      "experience": "Combined 25+ years",
+      "students": 85000
+    },
+    "icon": "🚀",
+    "image": "images/course-placeholders/course-free.svg",
+    "created_date": "2024-01-15",
+    "last_updated": "2024-01-15"
+  },
+  "metadata": {
+    "total_courses": 12,
+    "total_students": 125000,
+    "average_rating": 4.76,
+    "last_updated": "2024-01-15",
+    "content_team": {
+      "lead_instructor": "Dr. Sarah Chen",
+      "content_creators": 8,
+      "video_producers": 4,
+      "instructional_designers": 3
+    }
+  }
+}
