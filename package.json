@@ -1,0 +1,38 @@
+{
+  "name": "skillflow-academy",
+  "version": "1.0.0",
+  "description": "Premium Online Course Platform - Complete E-commerce System",
+  "main": "index.html",
+  "scripts": {
+    "start": "node deploy-to-afrihost.js",
+    "dev": "live-server --port=3000",
+    "build": "node scripts/content-build.js",
+    "deploy": "node deploy-to-afrihost.js",
+    "content:create": "node scripts/content-creator.js"
+  },
+  "keywords": [
+    "ecommerce",
+    "online-courses",
+    "education",
+    "digital-products",
+    "payfast",
+    "stripe",
+    "afrihost"
+  ],
+  "author": "SkillFlow Academy",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "mysql2": "^3.6.0",
+    "nodemailer": "^6.9.4"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skillflow-academy/skillflow-platform.git"
+  }
+}
