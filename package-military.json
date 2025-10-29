@@ -1,0 +1,50 @@
+{
+  "name": "skillflow-academy-military",
+  "version": "3.0.0",
+  "description": "Military-Grade Online Course Platform - 10K Subscribers, 1M+ ZAR/month",
+  "main": "index.html",
+  "scripts": {
+    "start": "node deploy-military-grade.js",
+    "dev": "live-server --port=3000 --https",
+    "deploy": "node deploy-military-grade.js",
+    "security:scan": "node scripts/security-scanner.js",
+    "content:create": "node scripts/content-creators.js",
+    "target:monitor": "node scripts/target-agent.js",
+    "chatbot:train": "node scripts/chatbot-trainer.js"
+  },
+  "keywords": [
+    "military-grade-security",
+    "online-courses",
+    "hd-content",
+    "llm-chatbot",
+    "anti-fraud",
+    "revenue-optimization",
+    "subscription-growth"
+  ],
+  "author": "SkillFlow Academy Security Team",
+  "license": "PROPRIETARY",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "mysql2": "^3.6.0",
+    "nodemailer": "^6.9.4",
+    "express": "^4.18.0",
+    "helmet": "^7.0.0",
+    "cors": "^2.8.5",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skillflow-academy/military-grade.git"
+  },
+  "security": {
+    "level": "military_grade",
+    "compliance": ["POPIA", "GDPR", "PCI-DSS"],
+    "features": ["anti-fraud", "encryption", "ddos-protection"]
+  }
+}
