@@ -1,0 +1,38 @@
+{
+  "name": "skillflow-academy-enhanced",
+  "version": "2.0.0",
+  "description": "Premium Online Course Platform with Addictive Learning Features",
+  "main": "index.html",
+  "scripts": {
+    "start": "node deploy-enhanced.js",
+    "dev": "live-server --port=3000",
+    "build": "node scripts/content-creator-enhanced.js",
+    "deploy": "node deploy-enhanced.js",
+    "content:enhanced": "node scripts/content-creator-enhanced.js",
+    "test:performance": "node scripts/test-enhanced-performance.js"
+  },
+  "keywords": [
+    "addictive-learning",
+    "online-courses",
+    "algorithm-mastery",
+    "gamification",
+    "memory-techniques",
+    "high-retention"
+  ],
+  "author": "SkillFlow Academy Enhanced",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "mysql2": "^3.6.0",
+    "nodemailer": "^6.9.4"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skillflow-academy/skillflow-enhanced.git"
+  }
+}
