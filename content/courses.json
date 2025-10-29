@@ -1,0 +1,646 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "AI Prompt Engineering Mastery",
+      "price": 1799,
+      "category": "Technology",
+      "level": "Beginner to Advanced",
+      "duration": "6 hours",
+      "modules": 12,
+      "students": 12450,
+      "rating": 4.9,
+      "trending": true,
+      "addictive_score": 95,
+      "completion_rate": 88,
+      "description": "Master the art of communicating with AI systems for maximum productivity and creativity. Learn advanced prompt techniques that work across all AI platforms.",
+      "full_description": "This addictive course uses gamification and practical exercises to ensure you remember every technique. You'll learn through interactive challenges, real-world projects, and engaging content that makes learning feel like play.",
+      "learning_outcomes": [
+        "Write effective prompts for any AI system",
+        "Understand AI thinking patterns through fun exercises",
+        "Create complex multi-step AI workflows with interactive simulations",
+        "Master context window management with memory games",
+        "Develop creative AI collaboration techniques through storytelling"
+      ],
+      "addictive_features": [
+        "Interactive coding challenges",
+        "Gamified progress tracking",
+        "Real-time feedback system",
+        "Community leaderboards",
+        "Unlockable achievements"
+      ],
+      "memory_techniques": [
+        "Spaced repetition exercises",
+        "Visual memory aids",
+        "Story-based learning",
+        "Practical application projects",
+        "Progressive difficulty scaling"
+      ],
+      "instructor": {
+        "name": "Dr. Sarah Chen",
+        "title": "AI Research Scientist",
+        "experience": "8+ years in AI development",
+        "students": 45000
+      },
+      "icon": "🤖",
+      "image": "images/course-placeholders/course-1.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": 2,
+      "title": "Short-Form Video Domination",
+      "price": 1599,
+      "category": "Marketing",
+      "level": "All Levels",
+      "duration": "5 hours",
+      "modules": 10,
+      "students": 18700,
+      "rating": 4.8,
+      "trending": true,
+      "addictive_score": 92,
+      "completion_rate": 85,
+      "description": "Create viral content for TikTok, Reels, and Shorts that drives massive business growth. Algorithm secrets and engagement hacks included.",
+      "full_description": "Learn through creating actual viral content in real-time. This course uses your own content creation as learning material, making every lesson immediately applicable and highly engaging.",
+      "learning_outcomes": [
+        "Create viral video content consistently through daily challenges",
+        "Understand platform algorithms deeply with interactive simulations",
+        "Build engaged communities with live feedback sessions",
+        "Monetize your video presence with real profit tracking",
+        "Master video editing and storytelling through creative competitions"
+      ],
+      "addictive_features": [
+        "Daily video creation challenges",
+        "Real audience feedback system",
+        "Viral score tracking",
+        "Content creation streaks",
+        "Community collaboration projects"
+      ],
+      "memory_techniques": [
+        "Hands-on video creation",
+        "Peer review system",
+        "Progress visualization",
+        "Success story integration",
+        "Template library building"
+      ],
+      "instructor": {
+        "name": "Marcus Johnson",
+        "title": "Video Marketing Expert",
+        "experience": "6+ years in social media",
+        "students": 32000
+      },
+      "icon": "🎬",
+      "image": "images/course-placeholders/course-2.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": 3,
+      "title": "Algorithm Mastery: Create Marketing & Lead Generation Systems That Work",
+      "price": 2199,
+      "category": "Marketing",
+      "level": "Intermediate",
+      "duration": "8 hours",
+      "modules": 14,
+      "students": 8900,
+      "rating": 4.9,
+      "trending": true,
+      "addictive_score": 96,
+      "completion_rate": 90,
+      "description": "Learn to create powerful algorithms for marketing, lead generation, and social media that actually work. Build systems that automate your business growth.",
+      "full_description": "This course reveals the exact algorithms we use to grow SkillFlow Academy. You'll build real working systems for lead generation, customer acquisition, and automated marketing that deliver measurable results.",
+      "learning_outcomes": [
+        "Build lead generation algorithms that work 24/7",
+        "Create social media growth algorithms",
+        "Develop automated customer acquisition systems",
+        "Design conversion optimization algorithms",
+        "Implement revenue tracking and optimization systems"
+      ],
+      "addictive_features": [
+        "Build your own working algorithms",
+        "Real-time performance tracking",
+        "Algorithm optimization challenges",
+        "Live system building sessions",
+        "Profit measurement dashboards"
+      ],
+      "memory_techniques": [
+        "Practical system building",
+        "Real business application",
+        "Performance visualization",
+        "Case study analysis",
+        "Iterative improvement cycles"
+      ],
+      "instructor": {
+        "name": "Alex Thompson",
+        "title": "Growth Algorithm Expert",
+        "experience": "7+ years in marketing automation",
+        "students": 28000
+      },
+      "icon": "⚡",
+      "image": "images/course-placeholders/course-3.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": 4,
+      "title": "No-Code AI Automation",
+      "price": 1699,
+      "category": "Technology",
+      "level": "Beginner to Intermediate",
+      "duration": "5 hours",
+      "modules": 9,
+      "students": 11200,
+      "rating": 4.8,
+      "trending": true,
+      "addictive_score": 88,
+      "completion_rate": 82,
+      "description": "Automate workflows and build powerful AI apps without any programming knowledge. Save 20+ hours per week with smart automation.",
+      "full_description": "Transform your productivity by building actual AI automations that work for your business. Each module delivers a working automation you can use immediately.",
+      "learning_outcomes": [
+        "Automate repetitive business tasks with AI",
+        "Build custom AI applications without code",
+        "Integrate multiple business systems automatically",
+        "Create efficient AI-powered workflows",
+        "Scale operations with intelligent automation"
+      ],
+      "addictive_features": [
+        "Build real automations each lesson",
+        "Time-saving calculator",
+        "Automation effectiveness scoring",
+        "Template library access",
+        "Community automation sharing"
+      ],
+      "memory_techniques": [
+        "Hands-on automation building",
+        "Real business impact measurement",
+        "Progressive complexity building",
+        "Success case integration",
+        "Practical application focus"
+      ],
+      "instructor": {
+        "name": "Dr. Lisa Park",
+        "title": "AI Automation Specialist",
+        "experience": "6+ years in no-code development",
+        "students": 19000
+      },
+      "icon": "🤖",
+      "image": "images/course-placeholders/course-4.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": 5,
+      "title": "YouTube Shorts Algorithm Domination",
+      "price": 1499,
+      "category": "Marketing",
+      "level": "All Levels",
+      "duration": "4 hours",
+      "modules": 8,
+      "students": 15600,
+      "rating": 4.7,
+      "trending": true,
+      "addictive_score": 94,
+      "completion_rate": 87,
+      "description": "Master the YouTube Shorts algorithm to get millions of views. Learn the exact strategies that work in 2024.",
+      "full_description": "This course uses the same algorithms we've used to grow channels to millions of views. You'll create content that the algorithm loves and builds rapid audience growth.",
+      "learning_outcomes": [
+        "Understand and leverage YouTube Shorts algorithm",
+        "Create content that gets maximum distribution",
+        "Build rapid audience growth systems",
+        "Monetize Shorts effectively",
+        "Analyze and optimize performance"
+      ],
+      "addictive_features": [
+        "View count tracking challenges",
+        "Algorithm simulation games",
+        "Content creation streaks",
+        "Growth milestone rewards",
+        "Community collaboration"
+      ],
+      "memory_techniques": [
+        "Real channel application",
+        "Performance tracking",
+        "Algorithm pattern recognition",
+        "Success story integration",
+        "Progressive skill building"
+      ],
+      "instructor": {
+        "name": "Sophia Martinez",
+        "title": "YouTube Growth Expert",
+        "experience": "5+ years in video marketing",
+        "students": 42000
+      },
+      "icon": "📺",
+      "image": "images/course-placeholders/course-5.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": 6,
+      "title": "Cryptocurrency Trading Algorithms",
+      "price": 1999,
+      "category": "Finance",
+      "level": "Intermediate",
+      "duration": "7 hours",
+      "modules": 12,
+      "students": 6800,
+      "rating": 4.8,
+      "trending": true,
+      "addictive_score": 91,
+      "completion_rate": 84,
+      "description": "Build automated trading algorithms for cryptocurrency markets. Learn strategies that work in bull and bear markets.",
+      "full_description": "Create your own trading algorithms while learning. This course combines theoretical knowledge with practical algorithm building for immediate application.",
+      "learning_outcomes": [
+        "Build profitable trading algorithms",
+        "Understand market analysis techniques",
+        "Implement risk management systems",
+        "Backtest and optimize strategies",
+        "Automate trading execution"
+      ],
+      "addictive_features": [
+        "Live trading simulations",
+        "Algorithm performance tracking",
+        "Trading competitions",
+        "Profit/loss tracking",
+        "Strategy optimization challenges"
+      ],
+      "memory_techniques": [
+        "Practical algorithm building",
+        "Real market application",
+        "Performance visualization",
+        "Case study analysis",
+        "Iterative improvement"
+      ],
+      "instructor": {
+        "name": "James Wilson",
+        "title": "Algorithmic Trading Expert",
+        "experience": "8+ years in crypto markets",
+        "students": 18000
+      },
+      "icon": "₿",
+      "image": "images/course-placeholders/course-6.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": 7,
+      "title": "Instagram Reels Growth Algorithm",
+      "price": 1399,
+      "category": "Marketing",
+      "level": "All Levels",
+      "duration": "4 hours",
+      "modules": 7,
+      "students": 13400,
+      "rating": 4.6,
+      "trending": true,
+      "addictive_score": 89,
+      "completion_rate": 83,
+      "description": "Master the Instagram Reels algorithm to grow your audience rapidly. Learn content strategies that work in 2024.",
+      "full_description": "This course teaches you to create content that the Instagram algorithm promotes. You'll learn through creating actual Reels that get real engagement.",
+      "learning_outcomes": [
+        "Understand Instagram Reels algorithm",
+        "Create viral content consistently",
+        "Build engaged communities",
+        "Monetize Instagram presence",
+        "Analyze and optimize performance"
+      ],
+      "addictive_features": [
+        "Reel creation challenges",
+        "Engagement tracking",
+        "Growth milestone rewards",
+        "Content strategy games",
+        "Community collaboration"
+      ],
+      "memory_techniques": [
+        "Hands-on content creation",
+        "Real audience feedback",
+        "Algorithm pattern recognition",
+        "Success story integration",
+        "Progressive skill building"
+      ],
+      "instructor": {
+        "name": "Elena Rodriguez",
+        "title": "Instagram Growth Specialist",
+        "experience": "5+ years in social media",
+        "students": 29000
+      },
+      "icon": "📱",
+      "image": "images/course-placeholders/course-7.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": 8,
+      "title": "TikTok Viral Content Algorithm",
+      "price": 1499,
+      "category": "Marketing",
+      "level": "All Levels",
+      "duration": "5 hours",
+      "modules": 9,
+      "students": 17800,
+      "rating": 4.7,
+      "trending": true,
+      "addictive_score": 93,
+      "completion_rate": 86,
+      "description": "Master the TikTok algorithm to create viral content that gets millions of views. Learn the exact content formulas that work.",
+      "full_description": "This course reveals the content patterns and algorithms that drive viral growth on TikTok. You'll create content using proven formulas that work.",
+      "learning_outcomes": [
+        "Understand TikTok algorithm deeply",
+        "Create viral content using proven formulas",
+        "Build rapid audience growth",
+        "Monetize TikTok presence effectively",
+        "Analyze and optimize content performance"
+      ],
+      "addictive_features": [
+        "Viral content challenges",
+        "View count tracking",
+        "Content formula games",
+        "Growth milestone rewards",
+        "Community collaboration"
+      ],
+      "memory_techniques": [
+        "Hands-on content creation",
+        "Real performance tracking",
+        "Algorithm pattern recognition",
+        "Success story integration",
+        "Progressive skill building"
+      ],
+      "instructor": {
+        "name": "Marcus Johnson",
+        "title": "TikTok Growth Expert",
+        "experience": "4+ years in short-form video",
+        "students": 35000
+      },
+      "icon": "🎵",
+      "image": "images/course-placeholders/course-8.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": 9,
+      "title": "LinkedIn Lead Generation Algorithm",
+      "price": 1799,
+      "category": "Marketing",
+      "level": "Intermediate",
+      "duration": "6 hours",
+      "modules": 10,
+      "students": 9200,
+      "rating": 4.8,
+      "trending": true,
+      "addictive_score": 87,
+      "completion_rate": 81,
+      "description": "Build automated lead generation systems on LinkedIn. Create algorithms that find and engage ideal customers automatically.",
+      "full_description": "Learn to build LinkedIn automation that actually works without getting banned. This course teaches ethical automation that builds genuine relationships.",
+      "learning_outcomes": [
+        "Build LinkedIn lead generation algorithms",
+        "Create automated engagement systems",
+        "Generate qualified leads automatically",
+        "Nurture relationships at scale",
+        "Measure and optimize lead quality"
+      ],
+      "addictive_features": [
+        "Lead generation challenges",
+        "Connection rate tracking",
+        "Response rate optimization",
+        "Lead quality scoring",
+        "Automation effectiveness games"
+      ],
+      "memory_techniques": [
+        "Practical system building",
+        "Real lead tracking",
+        "Performance visualization",
+        "Case study analysis",
+        "Iterative improvement"
+      ],
+      "instructor": {
+        "name": "David Kim",
+        "title": "LinkedIn Automation Expert",
+        "experience": "6+ years in B2B marketing",
+        "students": 22000
+      },
+      "icon": "💼",
+      "image": "images/course-placeholders/course-9.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": 10,
+      "title": "Email Marketing Automation Algorithm",
+      "price": 1599,
+      "category": "Marketing",
+      "level": "Intermediate",
+      "duration": "5 hours",
+      "modules": 8,
+      "students": 10800,
+      "rating": 4.7,
+      "trending": true,
+      "addictive_score": 86,
+      "completion_rate": 80,
+      "description": "Create intelligent email marketing algorithms that maximize opens, clicks, and conversions. Build systems that work automatically.",
+      "full_description": "Learn to build email algorithms that segment, personalize, and convert automatically. This course combines marketing psychology with technical automation.",
+      "learning_outcomes": [
+        "Build email segmentation algorithms",
+        "Create personalized content systems",
+        "Automate conversion optimization",
+        "Implement A/B testing algorithms",
+        "Maximize email revenue automatically"
+      ],
+      "addictive_features": [
+        "Open rate optimization challenges",
+        "Click-through rate games",
+        "Conversion tracking competitions",
+        "Revenue optimization simulations",
+        "Template effectiveness scoring"
+      ],
+      "memory_techniques": [
+        "Practical system building",
+        "Real campaign application",
+        "Performance visualization",
+        "Case study analysis",
+        "Iterative improvement"
+      ],
+      "instructor": {
+        "name": "Dr. Michael Brown",
+        "title": "Email Marketing Expert",
+        "experience": "7+ years in email automation",
+        "students": 19000
+      },
+      "icon": "📧",
+      "image": "images/course-placeholders/course-10.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": 11,
+      "title": "SEO Content Algorithm Mastery",
+      "price": 1899,
+      "category": "Marketing",
+      "level": "Intermediate",
+      "duration": "7 hours",
+      "modules": 11,
+      "students": 7600,
+      "rating": 4.8,
+      "trending": true,
+      "addictive_score": 88,
+      "completion_rate": 82,
+      "description": "Master Google's content algorithms to rank #1 for competitive keywords. Learn the exact strategies that work in 2024.",
+      "full_description": "This course teaches you to create content that Google's algorithms love. You'll learn through building actual content that ranks and drives traffic.",
+      "learning_outcomes": [
+        "Understand Google's content algorithms",
+        "Create SEO-optimized content that ranks",
+        "Build topical authority systems",
+        "Generate organic traffic automatically",
+        "Measure and optimize SEO performance"
+      ],
+      "addictive_features": [
+        "Ranking position tracking",
+        "Traffic growth challenges",
+        "Content optimization games",
+        "Authority building simulations",
+        "Competitor analysis competitions"
+      ],
+      "memory_techniques": [
+        "Practical content creation",
+        "Real ranking application",
+        "Performance visualization",
+        "Case study analysis",
+        "Iterative improvement"
+      ],
+      "instructor": {
+        "name": "Sarah Johnson",
+        "title": "SEO Algorithm Expert",
+        "experience": "8+ years in search marketing",
+        "students": 24000
+      },
+      "icon": "🔍",
+      "image": "images/course-placeholders/course-11.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "id": 12,
+      "title": "Social Media Ad Algorithm Optimization",
+      "price": 1999,
+      "category": "Marketing",
+      "level": "Advanced",
+      "duration": "6 hours",
+      "modules": 10,
+      "students": 5400,
+      "rating": 4.9,
+      "trending": true,
+      "addictive_score": 90,
+      "completion_rate": 85,
+      "description": "Master Facebook, Instagram, and TikTok ad algorithms to get maximum ROI. Learn bidding strategies and optimization techniques.",
+      "full_description": "This advanced course teaches you to work with social media ad algorithms to minimize costs and maximize conversions. You'll build actual ad campaigns that perform.",
+      "learning_outcomes": [
+        "Understand social media ad algorithms",
+        "Create high-converting ad campaigns",
+        "Optimize bidding strategies automatically",
+        "Build audience targeting algorithms",
+        "Maximize advertising ROI"
+      ],
+      "addictive_features": [
+        "ROI optimization challenges",
+        "Cost-per-acquisition games",
+        "Conversion rate competitions",
+        "Audience targeting simulations",
+        "Ad creative effectiveness scoring"
+      ],
+      "memory_techniques": [
+        "Practical campaign building",
+        "Real budget application",
+        "Performance visualization",
+        "Case study analysis",
+        "Iterative improvement"
+      ],
+      "instructor": {
+        "name": "Alex Thompson",
+        "title": "Paid Media Algorithm Expert",
+        "experience": "9+ years in digital advertising",
+        "students": 27000
+      },
+      "icon": "🎯",
+      "image": "images/course-placeholders/course-12.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    }
+  ],
+  "free_courses": {
+    "january_2024": {
+      "id": 0,
+      "title": "Digital Productivity Fundamentals",
+      "price": 0,
+      "category": "Productivity",
+      "level": "All Levels",
+      "duration": "2 hours",
+      "modules": 4,
+      "students": 45300,
+      "rating": 4.8,
+      "description": "Master proven time management techniques and tool optimization for maximum daily efficiency. Get more done in less time.",
+      "full_description": "Transform your productivity with fundamental time management and digital organization techniques. Learn systems that help you accomplish more in less time while reducing stress.",
+      "learning_outcomes": [
+        "Implement effective time management systems",
+        "Master digital organization tools",
+        "Reduce procrastination and distractions",
+        "Create efficient daily workflows",
+        "Achieve better work-life balance"
+      ],
+      "instructor": {
+        "name": "SkillFlow Team",
+        "title": "Productivity Experts",
+        "experience": "Combined 25+ years",
+        "students": 85000
+      },
+      "icon": "🚀",
+      "image": "images/course-placeholders/course-free.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    },
+    "february_2024": {
+      "id": 100,
+      "title": "Introduction to AI Algorithms for Beginners",
+      "price": 0,
+      "category": "Technology",
+      "level": "Beginner",
+      "duration": "2.5 hours",
+      "modules": 5,
+      "students": 0,
+      "rating": 0,
+      "description": "Get started with AI algorithms and understand how they're transforming businesses today. No technical background required.",
+      "full_description": "This beginner-friendly course introduces you to the world of AI algorithms in a fun, engaging way. Learn through interactive examples and practical applications.",
+      "learning_outcomes": [
+        "Understand basic AI algorithm concepts",
+        "Identify algorithm opportunities in business",
+        "Start implementing simple AI solutions",
+        "Recognize algorithm patterns in successful businesses",
+        "Plan your algorithm learning journey"
+      ],
+      "instructor": {
+        "name": "Dr. Sarah Chen",
+        "title": "AI Research Scientist",
+        "experience": "8+ years in AI development",
+        "students": 45000
+      },
+      "icon": "🧠",
+      "image": "images/course-placeholders/course-free-feb.svg",
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-15"
+    }
+  },
+  "metadata": {
+    "total_courses": 12,
+    "total_students": 125000,
+    "average_rating": 4.76,
+    "average_addictive_score": 90,
+    "average_completion_rate": 84,
+    "last_updated": "2024-01-15",
+    "content_team": {
+      "lead_instructor": "Dr. Sarah Chen",
+      "content_creators": 8,
+      "video_producers": 4,
+      "instructional_designers": 3,
+      "gamification_experts": 2,
+      "memory_specialists": 2
+    }
+  }
+}
